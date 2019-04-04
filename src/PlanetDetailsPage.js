@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { getPlanetById, getAllPlanets } from "./lib/swapi";
 
 class PlanetDetailsPage extends Component {
   constructor() {
@@ -11,9 +12,9 @@ class PlanetDetailsPage extends Component {
 
   componentDidMount() {
     const id = this.props.match.params.planetId;
-    fetch(`https://swapi.co/api/planets/${id}`)
-      .then(res => res.json())
-      .then(json => this.setState({ planet: json, loading: false }));
+    getPlanetById(id).then(json =>
+      this.setState({ planet: json, loading: false })
+    );
   }
 
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import PlanetListPage from "./PlanetsListPage";
-import PlanetDetailsPage from "./PlanetDetailsPage";
+import PlanetDetailsPage from "./PlanetDetailsPageContainer";
 
 import "./StarWarsApp.css";
 
